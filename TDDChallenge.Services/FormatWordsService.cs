@@ -16,7 +16,7 @@ namespace TDDChallenge.Services
         /// <param name="wordsList">List containing names</param>
         public FormatWordsService(string[] wordsList)
         {
-            WordsList = wordsList.ToList() ?? new List<string>();
+            WordsList = wordsList?.ToList() ?? new List<string>();
             WordsList.RemoveAll(s => string.IsNullOrEmpty(s));
         }
 
